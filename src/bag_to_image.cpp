@@ -98,7 +98,7 @@ void BagToImage::ReadBag() {
         target_topic_name = target_topic_name.substr(1);
       }
       target_topic_name = std::regex_replace(target_topic_name, std::regex("/"), "_");
-      fname = output_path_ + "/" + target_topic_name + "_" +
+      fname = output_path_ + "/" + target_topic_name + "/" + target_topic_name + "_" +
               boost::lexical_cast<std::string>(image_msg->header.stamp.sec) + "." +
               boost::lexical_cast<std::string>(image_msg->header.stamp.nanosec) + ".png";
 
